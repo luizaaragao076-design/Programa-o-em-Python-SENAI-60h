@@ -1,26 +1,54 @@
-print("Atividade: calculadora")
-print("....."*10)
-print()
-nome = input("Por gentileza, qual o seu nome? ")
-print()
-print("Boa tarde " + nome +"!")
-print()
-n1= float(input("por favor, informe o número desejado: "))
-n2 = float(input("Informe o segundo número desejado: "))
-
-print()
-
-print()
-soma = float(n1+n2)
-
-print("A soma desses valores é igual á ", soma)
-
-sub = float(n1-n2)
-print("A subtração dos valores é igual á ", sub)
+# criando a função
 
 
-mult = float(n1*n2)
-print("A multiplicação desses valores é igual á ", mult)
+def soma():
+    n1  = float(input('n1: '))
+    n2  = float(input('n2: '))
+    print('= ', n1+n2)
 
-div = float(n1/n2)
-print("A divisão dos valores é igual á ", div)
+
+def sub():
+    n1  = float(input('n1: '))
+    n2  = float(input('n2: '))
+    print('=', n1-n2)
+
+
+def mult():
+    n1  = float(input('n1: '))
+    n2  = float(input('n2: '))
+    print('= ', n1*n2)
+
+
+def divi():
+    n1  = float(input('n1: '))
+    n2  = float(input('n2: '))
+    print('=', n1/n2)
+
+
+def calculadora():
+    operacao = input('''
+            escolha a operação: 
+                     +
+                     -
+                     /
+                     *    
+                    ''')
+    if operacao == '+':
+       soma()
+    elif operacao == '-':
+       sub()
+    elif operacao == '/':
+        divi()
+    elif operacao == '*':
+        mult()
+    else:
+        print('Digite algo valido: ')                               
+
+
+
+def loop():
+    while True:
+        calculadora()
+
+
+loop()
